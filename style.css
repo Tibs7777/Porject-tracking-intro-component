@@ -1,0 +1,308 @@
+body {
+  font-family: 'Barlow', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 38px 0 0 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 32px 64px 0;
+  padding-left: 32px;
+}
+
+.header__logo {
+  width: 24px;
+}
+
+.header__burger {
+  cursor: pointer;
+}
+
+.header__burger--close {
+  content: url(./images/icon-close.svg);
+}
+
+.header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #edf2f6;
+  width: 50%;
+  height: 425px;
+  border-radius: 0 0 0 60px;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.nav {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  width: 90%;
+  max-width: 311px;
+  height: 233px;
+  padding: 24px;
+  -webkit-box-shadow: 0 5px 10px 0;
+          box-shadow: 0 5px 10px 0;
+  background: #FFF;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  z-index: 10;
+}
+
+.nav--open {
+  top: 100px;
+  -webkit-transition: top .4s ease-in-out;
+  transition: top .4s ease-in-out;
+}
+
+.nav--closed {
+  top: -243px;
+  -webkit-transition: top .4s ease-in-out;
+  transition: top .4s ease-in-out;
+}
+
+.nav__item {
+  color: #242942;
+  text-decoration: none;
+}
+
+.nav__item:hover {
+  text-decoration: underline;
+}
+
+.nav__item--login {
+  opacity: 0.5;
+}
+
+.nav__filler {
+  width: 100%;
+  display: block;
+  height: 1px;
+  background: #242942;
+  opacity: 0.15;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.main__image {
+  /* why the fuck does this image have white space on the left of it when it doesn't in the illustration.*/
+  width: 138%;
+  max-width: 900px;
+  margin-bottom: 80px;
+}
+
+.left {
+  padding-left: 32px;
+  color: #242942;
+  text-transform: uppercase;
+}
+
+.left__text__sub-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left__text__sub-heading__text {
+  display: inline;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  font-size: 15px;
+  opacity: 50%;
+  letter-spacing: 5px;
+  margin: 0 10px 0 0;
+}
+
+.left__text__sub-heading__highlight {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 700;
+  color: #FFF;
+  background: #242942;
+  width: 48px;
+  padding: 4px 0;
+  border-radius: 12.5px;
+  text-align: center;
+  margin-right: 16px;
+}
+
+.left__text__heading {
+  display: inline-block;
+  width: 95%;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 20px 0 16px 0;
+}
+
+.left__text__paragraph {
+  font-family: 'Barlow', sans-serif;
+  display: inline-block;
+  width: 80%;
+  opacity: 75%;
+  line-height: 1.444em;
+  text-transform: initial;
+}
+
+.left__preview {
+  font-size: 14px;
+  margin: 27px 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left__preview__link {
+  display: inline-block;
+  width: 153px;
+  padding: 12px 0;
+  background: #ff5e5e;
+  color: #FFF;
+  font-weight: 700;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  letter-spacing: 1px;
+}
+
+.left__preview__link:hover {
+  background: #ff9191;
+}
+
+.left__preview__text {
+  display: inline-block;
+  opacity: 50%;
+  letter-spacing: 1px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 64px 0 64px 0;
+  }
+  .header {
+    margin: 0 11.46% 124px 0;
+    padding-left: 11.46%;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header::before {
+    height: 427px;
+  }
+  .nav {
+    position: static;
+    width: 379px;
+    max-width: none;
+    height: auto;
+    padding: 0;
+    -webkit-box-shadow: 0 0 0 0;
+            box-shadow: 0 0 0 0;
+    background: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: none;
+            transform: none;
+    font-size: 15px;
+  }
+  .nav__filler {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-left: 11.46%;
+  }
+  .main .image__container {
+    max-width: 870px;
+    min-width: 435px;
+  }
+  .main__image {
+    margin-bottom: 0;
+    max-width: none;
+  }
+  .left {
+    width: 58%;
+    padding-left: 0;
+  }
+  .left__text__heading {
+    font-size: 64px;
+    margin: 16px 0 2.22vw 0;
+  }
+  .left__text__paragraph {
+    width: 46%;
+    min-width: 230px;
+  }
+  .left__preview {
+    margin: 4.44vw 0 0 0;
+  }
+  .left__preview__link {
+    width: 184px;
+    font-size: 16px;
+  }
+  .left__preview__text {
+    letter-spacing: 2px;
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
